@@ -34,4 +34,17 @@ public:
         
         newnode->info = element;
         newnode->leftchild = NULL;
+        newnode->rightchild = NULL;
+
+        node *parent = NULL;
+        node *currentnode = NULL;
+
+        search(element, parent, currentnode);
+
+        if (parent == NULL)
+        {
+            root = newnode;
+            return;
+        }
+
         
