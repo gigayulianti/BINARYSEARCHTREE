@@ -95,4 +95,18 @@ public:
 
     void preorder(node *ptr)
     {
-        
+        if (root == NULL)
+        {
+            cout << "tree is empty" << endl;
+            return;
+        }
+
+        if(ptr != NULL)
+        {
+            cout << ptr->info << " ";
+            preorder(ptr->leftchild);
+            preorder(ptr->rightchild);
+        }
+    };
+
+    
