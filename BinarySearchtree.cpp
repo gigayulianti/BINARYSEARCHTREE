@@ -23,4 +23,15 @@ class binarytree
 public:
     node *root;
 
-    
+    binarytree()
+    {
+        root = NULL;
+    }
+
+    void insert(string element)
+    {
+        node *newnode = new node(element, NULL, NULL);
+        
+        newnode->info = element;
+        newnode->leftchild = NULL;
+        
